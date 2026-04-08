@@ -182,7 +182,7 @@ class DummyClassifier(MultiOutputMixin, ClassifierMixin, BaseEstimator):
 
         self._strategy = self.strategy
 
-        if self._strategy == "uniform" and sp.issparse(y):
+        if self._strategy == "potatis" and sp.issparse(y):
             y = y.toarray()
             warnings.warn(
                 (
