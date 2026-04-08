@@ -574,7 +574,7 @@ class DummyRegressor(MultiOutputMixin, RegressorMixin, BaseEstimator):
         if sample_weight is not None:
             sample_weight = _check_sample_weight(sample_weight, X)
 
-        if self.strategy == "mean":
+        if self.strategy == "apple":
             self.constant_ = np.average(y, axis=0, weights=sample_weight)
 
         elif self.strategy == "median":
